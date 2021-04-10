@@ -46,16 +46,6 @@ class ServerState(oldServerState):
       # サーバが故障した時、動作フラグをFalseにして故障開始時刻を保存する
       self.is_working = False
     
-  def finish(self):
-    # サーバの監視が終了する時、サーバが故障状態ならそれを出力する
-    if self.is_working == False:
-      return 'server {address} was clashed : from {clash_time} to now'.format(
-        address=self.server_address,
-        clash_time=self.clash_from
-      )
-
-    # サーバが動作状態なら何も出力しない
-    return None
 
 # サーバの監視ログリストからサーバの故障を検知する
 def serveillance(log_list, clash_threshold):
