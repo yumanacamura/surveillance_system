@@ -38,22 +38,14 @@ class ServerState(oldServerState):
     self.clash_count += 1
 
     # 初回のタイムアウトなら故障開始時刻を保存する
-    self.clash_from = ping_datetime
+    if self.clash_count == 1:
+      self.clash_from = ping_datetime
 
     # タイムアウト回数が閾値を上回った場合、故障と判定する
     if self.clash_count >= self.clash_threshold:
       # サーバが故障した時、動作フラグをFalseにして故障開始時刻を保存する
       self.is_working = False
-  
-  def recover(self, ping_datetime):
-    # サーバが復旧した時、動作フラグをTrueにして故障期間を出力する
-    self.is_working = True
-    return 'server {address} was clashed : from {clash_time} to {recover_time}'.format(
-      address=self.server_address,
-      clash_time=self.clash_from,
-      recover_time=ping_datetime
-    )
-  
+    
   def finish(self):
     # サーバの監視が終了する時、サーバが故障状態ならそれを出力する
     if self.is_working == False:
