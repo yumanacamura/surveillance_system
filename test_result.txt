@@ -1,0 +1,24 @@
+test_serveillance (__main__.TestProblem1) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+OK
+test_serveillance (__main__.TestProblem2) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+OK
+test_serveillance (__main__.TestProblem3) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK
+test_serveillance (__main__.TestProblem4) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+OK
