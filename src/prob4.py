@@ -124,7 +124,7 @@ if __name__ == '__main__':
   log_file_path = input('監視ログファイル : ')
   clash_threshold = int(input('故障と判定するまでのタイムアウト回数 : '))
   busy_threshold = int(input('サーバが過負荷と判定する平均応答時間(ms) : '))
-  busy_length = int(input('平均応答時間を求める際にしようする応答数 : '))
+  busy_length = int(input('平均応答時間を求める際に使用する応答数 : '))
 
   with open(log_file_path, 'r') as f:
     log_list = [line.rstrip() for line in f.readlines()]
