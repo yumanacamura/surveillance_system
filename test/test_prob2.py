@@ -6,7 +6,7 @@ sys.path.append('.')
 
 from src.prob2 import serveillance
 
-class TestProblem1(unittest.TestCase):
+class TestProblem2(unittest.TestCase):
   def test_serveillance(self):
     # テストデータを格納したファイルのリストを取得する
     test_file_list = glob.glob('test/data/prob2-*.txt')
