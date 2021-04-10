@@ -25,7 +25,6 @@ class TestProblem1(unittest.TestCase):
       result = serveillance(log_list, clash_threshold, busy_threshold, busy_length)
 
       # 実行結果が期待するものになっているか確認する
-      print('\n'.join(result))
       if expected == ['no_clash']:
         self.assertEqual([], result)
       else:
